@@ -404,6 +404,12 @@ async function makePromiseAllTwo() {
 		const response1 = await fetch('https://jsonplaceholder.typicode.com/users/1');
 		const data1 = await response1.json();
 		console.log(data1);
+		const response2 = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+		const data2 = await response2.json();
+		console.log(data2);
+		const response3 = await fetch('https://jsonplaceholder.typicode.com/comments/1');
+		const data3 = await response3.json();
+		console.log(data3);
 
 		//Ваш код
 	} catch (error) {
@@ -429,6 +435,7 @@ const makeTwentyFour = () => {
 };
 
 //добавьте слушатель события
+document.querySelector('.b-24').addEventListener('click', makeTwentyFour);
 
 //Задание 25
 //В каком порядке числа выведутся в консоль?
@@ -445,12 +452,16 @@ function makeTwentyFive() {
 }
 
 //добавьте слушатель события
+document.querySelector('.b-25').addEventListener('click', makeTwentyFive);
 
 //Задание 26
 //Создайте функцию makeTwentySix, должна использовать `setTimeout` для отображения в консоли сообщения "Прошло 5 секунд" через 5 секунд. Вызывается функция по кнопке Задание 26.
 
 function makeTwentySix() {
 	//Ваш код
+	setTimeout(function () {
+		console.log('Прошло 5 секунд');
+	}, 5000);
 }
 
 document.querySelector('.b-26').addEventListener('click', makeTwentySix);
@@ -460,6 +471,9 @@ document.querySelector('.b-26').addEventListener('click', makeTwentySix);
 
 function makeTwentySeven() {
 	//Ваш код
+	setTimeout(function () {
+		console.log('Прошло 2 секунды');
+	}, 2000);
 }
 
 document.querySelector('.b-27').addEventListener('click', makeTwentySeven);
@@ -469,6 +483,9 @@ document.querySelector('.b-27').addEventListener('click', makeTwentySeven);
 
 function makeTwentyEight() {
 	//Ваш код
+	setInterval(function (){
+		console.log(`Прошло 3 секунды`);
+	}, 3000);
 }
 
 document.querySelector('.b-28').addEventListener('click', makeTwentyEight);
@@ -478,6 +495,9 @@ document.querySelector('.b-28').addEventListener('click', makeTwentyEight);
 
 function makeTwentyNine() {
 	//Ваш код
+	setInterval(function (){
+		console.log(`Прошло 2 секунды`);
+	}, 2000);
 }
 
 document.querySelector('.b-29').addEventListener('click', makeTwentyNine);
@@ -487,6 +507,9 @@ document.querySelector('.b-29').addEventListener('click', makeTwentyNine);
 
 function makeThirty() {
 	//Ваш код
+	setInterval(function (){
+		console.log(`Прошло 5 секунды`);
+	}, 5000);
 }
 
 document.querySelector('.b-30').addEventListener('click', makeThirty);
